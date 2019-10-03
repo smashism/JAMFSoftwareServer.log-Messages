@@ -13,16 +13,19 @@ The messages have an assigned status, as per:
 |:ok:| Non-issue, an informative event.|
 
 
-| Log Message Snippets | Status | PI | Detail |
+|:boom: Log Message Snippets | Status | PI | Detail |
 |:---|:---:|:---:|---|
 |`Fatal error logged during server initialization`|:boom:||JPS failed to startup, further investigation needed as to why.|
 |`APNs Certificate is expired.`|:boom:||Renew the APNS certificate.|
 |`[llmentProgramDeviceHelper] - 403 The organization has not accepted latest Terms and Conditions of the program`|:bomb:||Login to ABM/ASM to accept the new terms & conditions.|
 |`[ERROR] [duledPool-8] [ntInstanceSyncCommService] - com.jamfsoftware.jss.objects.streamlinedenrollment.service.DeviceEnrollmentProgramException: The DEP service reported an error.`|:bomb:||Download a new token from ABM/ASM & upload into the JPS.|
+
+|:bomb: Log Message Snippets | Status | PI | Detail |
+|:---|:---:|:---:|---|
 |`[ntInstanceSyncCommService] - com.jamfsoftware.jss.objects.streamlinedenrollment.service.DeviceEnrollmentProgramException: An error occurred during oauth token refresh`|:bomb:||Either renew DEP token or login to ABM/ASM to accept the new terms & conditions.|
 |`[CMSCipher                ] - Unable to decrypt data`|:bomb:|PI-006374|macOS - Configuration Profile - Security & Privacy Payload - FileVault Recovery Keys cannot be viewed if Certificate expired. Observation : Filevault 2 recovery keys are displayed in the JPS as a long string with hundreds of characters starting with 'MIAGCSqGSIb3DQEHA6CAMIACAQAxgg'. Jamf Pro has a FILEVAULT2COMM certificate in the database, and it is valid for 5 years. In case it needs to be renewed we hit this issue. Fixed with JPS 10.10. Can be manually resolved by we creating a new configuration profile with Security & Privacy Payload with Enable Escrow Personal Recovery Key selected and use a reissue script (https://github.com/JAMFSupport/FileVault2_Scripts/blob/master/reissueKey.sh)|
 
-| Log Message Snippets | Status | PI | Detail |
+|:warning: Log Message Snippets | Status | PI | Detail |
 |:---|:---:|:---:|---|
 |`[llmentProgramDeviceHelper] - 403: token_expiredForbidden`|:warning:||Remove or renew the offending token.|
 |`[llmentProgramDeviceHelper] - 403: token_rejectedForbidden`|:warning:||Remove or renew the offending token.|
@@ -38,6 +41,6 @@ The messages have an assigned status, as per:
 |`[Root exception is javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target]`|:warning:||LDAP SSL certificate not trusted by JPS|
 |`javax.naming.CommunicationException: <ldap server fqdn>:<ldap server port> [Root exception is javax.net.ssl.SSLHandshakeException: java.security.cert.CertificateException: javax.net.ssl.SSLException: hostname in certificate didn't match: <ldap server fqdn> != <ldap server fqdn> OR <ldap server fqdn>]`|:warning:||Check FQDN for LDAPS does not match FQDN entries within cert.|
 
-| Log Message Snippets | Status | PI | Detail |
+|:ok: Log Message Snippets | Status | PI | Detail |
 |:---|:---:|:---:|---|
 
