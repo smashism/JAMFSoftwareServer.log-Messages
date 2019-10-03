@@ -5,17 +5,18 @@ The messages have an assigned status, as per:
 
 | Status | Description |
 |:---:|---|
-| :no_entry_sign: | A message which indicates an issue which needs immediate attention |
+| :no_entry_sign: | A message which indicates an issue which needs attention |
 | :warning: | A message that can either be ignored, or can be indicative of an issue |
 | :ok: | No issue, maybe an informative message |
 
 
 | Log Message Snippets | Status | PI | Detail |
 |:---|:---:|:---:|---|
+|`Fatal error logged during server initialization`|:no_entry_sign:||JPS failed to startup, further investigation needed as to why.|
 |`APNs Certificate is expired.`|:no_entry_sign:||Renew the APNS certificate.|
+|`[llmentProgramDeviceHelper] - 403 The organization has not accepted latest Terms and Conditions of the program`|:no_entry_sign:||Login to ABM/ASM to accept the new terms & conditions. https://datajar.zendesk.com/agent/tickets/27232|
 |`[ERROR] [duledPool-8] [ntInstanceSyncCommService] - com.jamfsoftware.jss.objects.streamlinedenrollment.service.DeviceEnrollmentProgramException: The DEP service reported an error.`|:warning:||Download a new token from ABM/ASM & upload into the JPS.|
 |`[ntInstanceSyncCommService] - com.jamfsoftware.jss.objects.streamlinedenrollment.service.DeviceEnrollmentProgramException: An error occurred during oauth token refresh`|:warning:||Either renew DEP token or login to ABM/ASM to accept the new terms & conditions. https://datajar.zendesk.com/agent/tickets/27232|
-|`[llmentProgramDeviceHelper] - 403 The organization has not accepted latest Terms and Conditions of the program`|:no_entry_sign:||Login to ABM/ASM to accept the new terms & conditions. https://datajar.zendesk.com/agent/tickets/27232|
 |`[llmentProgramDeviceHelper] - 403: token_expiredForbidden`|:warning:||Remove or renew the offending token.|
 |`[llmentProgramDeviceHelper] - 403: token_rejectedForbidden`|:warning:||Remove or renew the offending token.|
 |`[llmentProgramDeviceHelper] - 400 response from Device Enrollment Program indicating one of the following:`||:warning:||DEP token has been downloaded from ABM/ASM but not uploaded to JPS. Remove or renew the offending token.|
