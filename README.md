@@ -44,3 +44,4 @@ The messages have an assigned status, as per:
 |`[PushNotificationUtility  ] - x invalid tokens were submitted to be pushed.`|:ok:||Informational message, not actionable.
 |`[FeedbackTokenFactory     ] - 1 feedback tokens were found:`|:ok:||Informational message, not actionable.
 |`[EduMonitor1] [ucationProfileFactoryImpl] - Computer is not the correct macOS Version to have Edu Profile:`|:ok:||Informational message, not actionable.
+|`[rentProfileCleanupMonitor] - Running parent profile cleanup`:ok:||Informational message, not actionable.
