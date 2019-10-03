@@ -37,5 +37,10 @@ The messages have an assigned status, as per:
 |`javax.naming.CommunicationException: <ldap server fqdn>:<ldap server port> [Root exception is javax.net.ssl.SSLHandshakeException: java.security.cert.CertificateException: javax.net.ssl.SSLException: hostname in certificate didn't match: <ldap server fqdn> != <ldap server fqdn> OR <ldap server fqdn>]`|:warning:||FQDN for LDAPS does not match FQDN entries within cert.|
 |`[VppCommService           ] - Error clearing email for user:`|:warning:||Error is due to aother MDM trying to assign content to the user or having tried previously. This might be cleared via the VPP API directly but can also be ignored.
 |`[lientCommunicationServlet] - Comm Device null.`|:warning:||A device which is no longer managed via the JPS is contacting the JPS. The message body cointains MAC & remote IP details so might be traceable if a concern, but can also be ignored.
-
-
+[`[JAMFPushProxyConnection ] - Jamf Push Proxy returned status of: 400`|:warning:||Informational message, can be ignored as long as Push Proxy is correctly renewing.
+[`[WARN ] [neralPool-0] [PushQueueManager ] - Unable to flush connection com.jamfsoftware.jss.pushnotification.connections.JAMFPushProxyConnection`|:warning:||Informational message, can be ignored as long as Push Proxy is correctly renewing.
+|`[VppEmailMonitor ] - Running email monitor`|:ok:||Informational message, not actionable.
+|`[VppEmailMonitor          ] - Email monitor completed after x.xx seconds`|:ok:||Informational message, the seconds taken acna be of use when troubleshooting.
+|`PushNotificationUtility  ] - x invalid tokens were submitted to be pushed.`|:ok:||Informational message, not actionable.
+|`[FeedbackTokenFactory     ] - 1 feedback tokens were found:`|:ok:||Informational message, not actionable.
+|`[EduMonitor1] [ucationProfileFactoryImpl] - Computer is not the correct macOS Version to have Edu Profile:`|:ok:||Informational message, not actionable.
