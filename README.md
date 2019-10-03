@@ -13,10 +13,10 @@ The messages have an assigned status, as per:
 
 | Log Message Snippets | Status | PI | Detail |
 |:---|:---:|:---:|---|
-|`Fatal error logged during server initialization`|:boom:||JPS failed to startup, further investigation needed as to why.|
-|`APNs Certificate is expired.`|:boom:||Renew the APNS certificate.|
-|`[llmentProgramDeviceHelper] - 403 The organization has not accepted latest Terms and Conditions of the program`|:bomb:||Login to ABM/ASM to accept the new terms & conditions.|
-|`[ERROR] [duledPool-8] [ntInstanceSyncCommService] - com.jamfsoftware.jss.objects.streamlinedenrollment.service.DeviceEnrollmentProgramException: The DEP service reported an error.`|:bomb:||Download a new token from ABM/ASM & upload into the JPS.|
+|Fatal error logged during server initialization|:boom:||JPS failed to startup, further investigation needed as to why.|
+|APNs Certificate is expired.|:boom:||Renew the APNS certificate.|
+|[llmentProgramDeviceHelper] - 403 The organization has not<br/> accepted latest Terms and Conditions of the program|:bomb:||Login to ABM/ASM to accept the new terms & conditions.|
+|[ERROR] [duledPool-8] [ntInstanceSyncCommService] - com.jamfsoftware.jss.objects.streamlinedenrollment<br/>.service.DeviceEnrollmentProgramException: <br/>The DEP service reported an error.|:bomb:||Download a new token from ABM/ASM & upload into the JPS.|
 |`[ntInstanceSyncCommService] - com.jamfsoftware.jss.objects.streamlinedenrollment.service.DeviceEnrollmentProgramException: An error occurred during oauth token refresh`|:bomb:||Either renew DEP token or login to ABM/ASM to accept the new terms & conditions.|
 |`[CMSCipher                ] - Unable to decrypt data`|:bomb:|PI-006374|macOS - Configuration Profile - Security & Privacy Payload - FileVault Recovery Keys cannot be viewed if Certificate expired. Observation : Filevault 2 recovery keys are displayed in the JPS as a long string with hundreds of characters starting with 'MIAGCSqGSIb3DQEHA6CAMIACAQAxgg'. Jamf Pro has a FILEVAULT2COMM certificate in the database, and it is valid for 5 years. In case it needs to be renewed we hit this issue. Fixed with JPS 10.10. Can be manually resolved by we creating a new configuration profile with Security & Privacy Payload with Enable Escrow Personal Recovery Key selected and use a reissue script (https://github.com/JAMFSupport/FileVault2_Scripts/blob/master/reissueKey.sh)|
 |`[VppServiceTokenObject ] - Error parsing service token`|:bomb:||A VPP token has expired, renew or removed offending token.|
