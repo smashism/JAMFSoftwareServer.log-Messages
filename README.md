@@ -24,3 +24,8 @@ The messages have an assigned status, as per:
 |`[llmentProgramDeviceHelper] - 403: SERVER_INACTIVE` |:warning:|There is a DEP PreStage with a token in use which no longer has a location in ABM/ASM. Remove the offending PreStage|
 |`[llmentProfileSynchronizer] - com.jamfsoftware.jss.objects.streamlinedenrollment.service.DeviceEnrollmentProgramException: The DEP service reported that invalid options were submitted.`|:warning:||A ABM DEP token has been assigned to a DEP PreStage for Shared iPad, correct the DEP token in use by the PreStage or remove the Shared iPad settings.|
 |`Error parsing iTunes ID: String index out of range`|:warning:|PI-000867|This is due to self hosted iBooks being added to Jamf Pro. To stop getting these messages: Disable Populate Purchased VPP Content from Settings > Global > VPP > Content, for each token in use.|
+|`[Root exception is javax.net.ssl.SSLHandshakeException: PKIX path validation failed: java.security.cert.CertPathValidatorException: validity check failed]`|:warning:||LDAPS certificate validity check failed. Check certificate presented to JPS|
+|`javax.naming.CommunicationException: <ldap.server:port> [Root exception is java.net.SocketTimeoutException: connect timed out]`|:warning:||Connection to LDAP <ldap.server:port> timed out. Up LDAP time out time & investigate if persists.|
+|`javax.naming.CommunicationException: <ldap.server:port> [Root exception is java.net.SocketTimeoutException: Read timed out]`|:warning:||Connection to LDAP <ldap.server:port> timed out. Up LDAP time out time & investigate if persists.|
+|`[Root exception is java.net.SocketException: Connection reset]`|:warning:||Connectivity issue with to LDAP(s), investigation neded.|
+|
