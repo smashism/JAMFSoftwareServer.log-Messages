@@ -41,6 +41,6 @@ The messages have an assigned status, as per:
 [`[WARN ] [neralPool-0] [PushQueueManager ] - Unable to flush connection com.jamfsoftware.jss.pushnotification.connections.JAMFPushProxyConnection`|:warning:||Informational message, can be ignored as long as Push Proxy is correctly renewing.
 |`[VppEmailMonitor ] - Running email monitor`|:ok:||Informational message, not actionable.
 |`[VppEmailMonitor          ] - Email monitor completed after x.xx seconds`|:ok:||Informational message, the seconds taken acna be of use when troubleshooting.
-|`PushNotificationUtility  ] - x invalid tokens were submitted to be pushed.`|:ok:||Informational message, not actionable.
+|`[PushNotificationUtility  ] - x invalid tokens were submitted to be pushed.`|:ok:||Informational message, not actionable.
 |`[FeedbackTokenFactory     ] - 1 feedback tokens were found:`|:ok:||Informational message, not actionable.
 |`[EduMonitor1] [ucationProfileFactoryImpl] - Computer is not the correct macOS Version to have Edu Profile:`|:ok:||Informational message, not actionable.
