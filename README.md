@@ -1,5 +1,7 @@
 # JAMFSoftwareServer.log Messages
-This repo contains a list of messages which can appear in the JAMFSoftwareServer.log, with a note as to what to do with them (if any action is requied).
+This repo contains a list of messages which can appear in the JAMFSoftwareServer.log, with a note as to what action might be required due to the messages being generated.
+
+Please reach out to Jamf Support if any questions, & Pull Requests accepted to add more messages.
 
 The log message snippets are displayed in the 1st column, scroll to the right for any recommended steps.
 
